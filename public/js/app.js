@@ -5,7 +5,7 @@ const messageOne = document.querySelector("#p1");
 const messageTwo = document.querySelector("#p2");
 
 const searchHandler = (address) => {
-  fetch("http://localhost:3000/weather?address=" + address)
+  fetch("/weather?address=" + address)
     .then((response) => {
       response.json().then((data) => {
         if (data.error) {
